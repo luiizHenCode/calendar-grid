@@ -1,14 +1,12 @@
 import { CalendarGrid } from "./components/CalendarGrid";
 import { ModalScheduleInfo } from "./components/ModalScheduleInfo";
 import { CalendarContextProvider } from "./hooks/useCalendar";
+import { MyScheduling } from "./Layout/MyScheduling";
 
 function App() {
   return (
     <div className="App">
-      <CalendarContextProvider>
-        <CalendarGrid />
-        <ModalScheduleInfo />
-      </CalendarContextProvider>
+      <MyScheduling />
     </div>
   );
 }

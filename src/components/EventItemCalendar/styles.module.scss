@@ -1,1 +1,16 @@
-.container {}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3px 6px;
+  cursor: pointer;
+
+  small {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  span {
+    font-size: 14px;
+  }
+}

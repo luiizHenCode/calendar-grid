@@ -1,0 +1,93 @@
+.container {
+  width: 100%;
+  max-width: 400px;
+  max-height: 100vh;
+  overflow: hidden auto;	
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: rgb(179, 179, 179);
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(99, 98, 98);
+  }
+
+  header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    li {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px;
+      background-color: #afbcca;
+
+      position: relative;
+      overflow: hidden;
+
+      div.cardDetails {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2px;
+        padding-left: 20px;
+
+        p {
+          font-weight: bold;
+          letter-spacing: 0.02em;
+        }
+
+        small {
+          font-size: 12px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      div.cardOptions {
+        display: flex;
+        flex-direction: column;
+
+        button {
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          color: #ffffff;
+          border: 0;
+
+          &:hover {
+            background-color: #a5b1bf;
+          }
+        }
+      }
+    }
+  }
+}

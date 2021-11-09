@@ -1,12 +1,24 @@
-import React from 'react';
+import React from "react";
+import Modal from "react-modal";
 
+import styles from "./styles.module.scss";
 
-import styles from './styles.module.scss';
+import { useCalendar } from "../../hooks/useCalendar";
 
-export function ModalScheduleInfo(){
+Modal.setAppElement("#root");
+
+export function ModalScheduleInfo() {
+  const { modalEvent, handleCloseModalEvent } = useCalendar();
+
   return (
-    <div className={styles.container}>
-        oi
-    </div>
+    <Modal
+      isOpen={modalEvent}
+      onRequestClose={handleCloseModalEvent}
+      shouldCloseOnOverlayClick={true}
+      overlayClassName={styles.modalOverlay}
+      className={styles.modalContent}
+    >
+      <div>oi</div>
+    </Modal>
   );
 }
